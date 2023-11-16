@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --base-font: "Mulish", sans-serif;
+
+  --color-white: #ffffff;
+  --bg-base: #f9f4fb;
+  --color-title: #b52184;
+  --color-text: #312d64;
+  --bg-gradient: linear-gradient(96deg, #343193 0%, #302c63 99.68%);
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--base-font);
+  font-size: 1.6rem;
+  background: var(--bg-base);
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  color: var(--color-title);
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin: 1.7rem 0 0.5rem 0;
+}
+
+h2 {
+  color: var(--color-title);
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+h3 {
+  color: var(--color-title);
+  font-size: 2.9rem;
+  line-height: 3.6rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+p {
+  color: var(--color-text);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+button,
+input,
+fieldset,
+textarea {
+  border: none;
+  background: none;
+  font-family: var(--base-font);
+}
+
+#hero {
+  padding: 0 3.4rem 9.3rem 3.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#hero .hero-cta p {
+  font-size: 2rem;
+  line-height: normal;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 3.5rem;
+}
+
+#hero .hero-cta .button-down {
+  width: 5.8rem;
+  height: 10.5rem;
+  border: 0.4rem solid var(--color-title);
+  border-radius: 76rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: filter 300ms;
+}
+
+#hero .hero-cta .button-down:hover {
+  filter: brightness(0.7);
+}
+
+#hero .hero-cta .button-down img {
+  width: 3rem;
+}
+
+#cards {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  gap: 4.9rem;
+  padding: 5.3rem 3.9rem 5.6rem;
+
+  background: var(--bg-gradient);
+}
+
+#cards .card {
+  width: min(35.2rem, 100%);
+  background: var(--color-white);
+  padding: 2.6rem;
+  border-radius: 2rem;
+}
+
+#cards .card img {
+  width: 8rem;
+}
+
+#cards .card .card-text {
+  width: 26.5rem;
+}
+
+#contact {
+  width: 100%;
+  height: 100%;
+  padding: 7.8rem 4rem 6.5rem;
+}
+
+#contact form h2 {
+  margin-bottom: 4.3rem;
+}
+
+#contact form .input-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  border: 0.15rem solid var(--color-text);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem 1.6rem;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#contact form textarea {
+  height: 12.6rem;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#contact form input::placeholder {
+  padding-left: 2.8rem;
+}
+
+#contact form button {
+  background: var(--bg-gradient);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  padding: 1rem 1.6rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  transition: filter 200ms;
+}
+
+#contact form button:hover {
+  filter: brightness(0.9);
+}
+
+#name {
+  background: url(./assets/person.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+#email {
+  background: url(./assets/mail.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+footer {
+  background: var(--bg-gradient);
+  padding: 3.2rem 1.6rem;
+}
+
+footer p {
+  color: var(--color-white);
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 5.8rem;
+    line-height: 7.3rem;
+    margin: 0 0 0.8rem;
+  }
+
+  #hero {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 2.9rem 10.3rem 10.9rem;
+    max-height: 83.6rem;
+  }
+
+  #hero .hero-cta {
+    margin-top: 31.2rem;
+  }
+
+  #hero .hero-cta p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+  }
+
+  #hero .hero-cta .button-down {
+    margin: 0;
+  }
+
+  #cards {
+    grid-template-columns: repeat(3, 366px);
+    justify-content: center;
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+
+  #cards .card {
+    padding: 3.2rem;
+    border-radius: 2.4rem;
+  }
+
+  #cards .card img {
+    width: 9.7rem;
+    margin-bottom: 4rem;
+  }
+
+  #contact {
+    display: flex;
+    align-items: center;
+    gap: 9.2rem;
+    padding: 0;
+    height: 62.2rem;
+    margin: 0 auto;
+    background: url(./assets/stars.svg) no-repeat right;
+  }
+
+  #contact form {
+    flex: 1;
+    margin-left: 10.9rem;
+  }
+
+  #contact .stars {
+    flex: 1;
+  }
+}
